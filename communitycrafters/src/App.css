@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
+  background-color: rgb(2, 14, 54);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.App {
+  text-align: center;
+  font-size: 15px;
+}
+.landingparagraph{
+  color: rgb(150, 0, 0);
+  margin-left: 80px;
+  margin-right: 80px;
+  font-size: 20px;
+}
+.fadeInShakeButton {
+  background-color: #af0d0d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+.loginbutton {
+  background-color: #041788;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  animation: fadeInUp 1.5s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.fadeInShakeButton:hover {
+  background-color: #0056d6;
+  animation: shake 0.5s ease-in-out;
+}
+.loginbutton:hover {
+  background-color: #ffffff;
+  color: #af0d0d;
+  animation: shake 0.5s ease-in-out;
+}
+.landing-container button:hover::before {
+  content: "😃";
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-5px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(5px);
   }
 }
