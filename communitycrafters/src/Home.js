@@ -22,7 +22,7 @@ import './Home.css';
       description: 'Leave the cleaning to us and enjoy a sparkling clean space.',
       price: 'Starting from $50',
       image: 'https://nextdaycleaning.com/wp-content/uploads/2020/06/Main-Benefits-of-Residential-Cleaning-Services-1024x663.jpg',
-    },
+    }, 
     {
         id: 4,
         name: 'Home Sitting Services',
@@ -67,23 +67,54 @@ import './Home.css';
       },  
   ];
 
+  function Sidebar() {
+    const [isOpen, setIsOpen] = useState(false);
+  
+    const toggleSidebar = () => {
+      setIsOpen(!isOpen);
+    };
+  
+    return (
+      <div className={`sidebar ${isOpen ? 'open' : ''}`}>
+        <button className="toggle-button" onClick={toggleSidebar}>
+          ☰
+        </button>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Services</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+    );
+  }
+
   function Home() {
     const [searchTerm, setSearchTerm] = useState('');
     const filteredServices = featuredServices.filter(service =>
       service.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
+
   
     return (
       <div className="home-container">
+        <Sidebar />
         <h1>View CommunityCrafters Marketplace!</h1>
-        <div className="search-bar">
-          <input
-            type="text"
-            placeholder="Search by name..."
-            value={searchTerm}
-            onChange={e => setSearchTerm(e.target.value)}
-          />
-        </div>
+
+        <div class="input__container">
+  <div class="shadow__input"></div>
+  <button class="input__button__shadow">
+    <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" height="20px" width="20px">
+      <path d="M4 9a5 5 0 1110 0A5 5 0 014 9zm5-7a7 7 0 104.2 12.6.999.999 0 00.093.107l3 3a1 1 0 001.414-1.414l-3-3a.999.999 0 00-.107-.093A7 7 0 009 2z" fill-rule="evenodd" fill="#17202A"></path>
+    </svg>
+  </button>
+  <input type="text" 
+  name="text" 
+  value={searchTerm} 
+  onChange={e => setSearchTerm(e.target.value)} 
+  class="input__search" 
+  placeholder="What do you want to search?"/>
+</div><br /><br />
         <div className="featured-services">
           {filteredServices.map((service) => (
             <div key={service.id} className="service-card">

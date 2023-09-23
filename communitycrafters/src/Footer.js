@@ -8,6 +8,7 @@ const Footer = () => {
       <div className="mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="text-center md:text-left mb-4 md:mb-0">
+          </div>
             <p className="font-semibold text-lg">Contact Us :</p>
             <p>Email: info@CommunityCrafters.com</p>
             <p>Phone: 0 (+254) 768-453442</p>
@@ -41,7 +42,7 @@ const Footer = () => {
         <p className="text-center text-black">
           &copy; 2023 CommunityCrafters. All rights reserved.
         </p>
-      </div>
+      
     </footer>
   );
 };
