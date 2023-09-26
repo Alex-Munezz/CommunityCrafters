@@ -4,6 +4,7 @@ import LandingPage from './LandingPage';
 import Login from './Login';
 import CreateAccount from './CreateAccount';
 import Home from './Home';
+import Booking from './Booking';
 import Admin from './Admin';
 import 'admin-lte/dist/js/adminlte.min.js';
 
@@ -18,6 +19,7 @@ function App() {
       <Route path="/Login" element={<Login />} />
       <Route path="/CreateAccount" element={<CreateAccount />} />
       <Route path="/Home" element={<Home />} />
+      <Route path="/Booking" element={<Booking />} />
       <Route path="/Admin" element={<Admin />} />
      </Routes>
      </div>

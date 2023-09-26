@@ -1,29 +1,14 @@
 import { useNavigate } from 'react-router-dom';
 import Footer from './Footer.js';
+import image1 from './image1.jpeg';
+import image2 from './image2.jpg';
+import image3 from './image3.jpg';
+import image4 from './image4.jpeg';
+import image5 from './image5.webp';
+import image6 from './image6.webp';
+import image7 from './image7.jpg';
 
-    const images = [
-      {
-        id : 1,
-        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRbvGLS5mjh3GzSxDaEzoR2Whs9OXCmGLQLBfIfGzES0RjCwm9QhrLEFeyRUrqQjzRWXw&usqp=CAU',
-      },
-      {
-        id : 2,
-        image: 'https://us.123rf.com/450wm/bermek/bermek2304/bermek230403255/202409630-power-cord-plugged-into-electrical-outlet-on-insulated-wall-in-hospital-room.jpg?ver=6',
-      },
-      {
-        id : 3,
-        image: 'https://nextdaycleaning.com/wp-content/uploads/2020/06/Main-Benefits-of-Residential-Cleaning-Services-1024x663.jpg',
-      },
-      {
-        id : 4,
-        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBKxp-BFy5a336hk4y9-PTT9Qw77UFWgCDiQ&usqp=CAU',
-      },
-      {
-        id : 5,
-        image: 'https://i0.wp.com/www.hadviser.com/wp-content/uploads/2020/04/2-stunning-african-braids-CLPMe82H6Kw.jpg?resize=1073%2C1080&ssl=1',
-      },
-    ]
-   
+
 function LandingPage() {
 
     const navigate = useNavigate();
@@ -40,13 +25,30 @@ function LandingPage() {
   <h1>Welcome to CommunityCrafters where you can find
      all the services you need in one place </h1>
      <br />
+     <br />
+     <br />
+     <br />
+     <br />
+     <br />
+     <br />
+     <br />
      <div className="box">
-      {images.map((image, index) => (
-        <span key={index} style={{'--1': index + 1}}>
-        <img src={images} alt=""/>
-        </span>
-      ))}
-     </div>
+      <span style={{'--i': 1}}><img src={image1} alt="" /></span>
+      <span style={{'--i': 2}}><img src={image2} alt="" /></span>
+      <span style={{'--i': 3}}><img src={image3} alt="" /></span>
+      <span style={{'--i': 4}}><img src={image4} alt="" /></span>
+      <span style={{'--i': 5}}><img src={image5} alt="" /></span>
+      <span style={{'--i': 6}}><img src={image6} alt="" /></span>
+      <span style={{'--i': 7}}><img src={image7} alt="" /></span>
+    </div>
+     <br />
+     <br />
+     <br />
+     <br />
+     <br />
+     <br />
+     <br />
+     <br />
      <br />
      <p className='landingparagraph'>
      Discover the perfect blend of convenience and community with our
@@ -60,6 +62,7 @@ function LandingPage() {
      </p>
      <div className='landing'> 
      <p>Would you like to give us a shot?</p>
+     <br />
      <button class="btn"
      onClick={handleCreateAccount}>
     Create Account
@@ -73,7 +76,7 @@ function LandingPage() {
          LOGIN
       </button>
       </div>
-      <br /><br /><br /><br />
+      <br /><br /><br />
        <Footer />
         </div>
     )

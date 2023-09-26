@@ -24,7 +24,7 @@ function Login() {
   return (
     <div className="login-container">
       <h2>Login</h2>
-      <form className="form" onSubmit={handleLogin}>
+      <form className="login-form" onSubmit={handleLogin}>
         <input
           type="text"
           className="input"
@@ -43,7 +43,7 @@ function Login() {
           placeholder="Password"
         />
 
-        <button>Submit</button>
+        <button className='login-button'>Submit</button>
       </form>
       {showNotification && <p className="success-notification">Welcome back🤗</p>}
       <br />

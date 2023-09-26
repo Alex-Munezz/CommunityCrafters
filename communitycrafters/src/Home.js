@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Home.css';
 
   const featuredServices = [
@@ -67,52 +68,52 @@ import './Home.css';
       },  
   ];
 
-  function Sidebar() {
-    const [isOpen, setIsOpen] = useState(false);
   
-    const toggleSidebar = () => {
-      setIsOpen(!isOpen);
-    };
-  
+  function ServiceCard({ service, bookService }) {
     return (
-      <div className={`sidebar ${isOpen ? 'open' : ''}`}>
-        <button className="toggle-button" onClick={toggleSidebar}>
-          ☰
-        </button>
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Services</li>
-          <li>Contact</li>
-        </ul>
+      <div className="service-card">
+        <img src={service.image} alt={service.name} />
+        <h2>{service.name}</h2>
+        <p>{service.description}</p>
+        <p>{service.price}</p>
+        <button onClick={() => bookService(service)}>Book Now</button>
       </div>
     );
   }
-
+  
   function Home() {
     const [searchTerm, setSearchTerm] = useState('');
-    const filteredServices = featuredServices.filter(service =>
+    const navigate = useNavigate(); // Move this line here
+  
+    const filteredServices = featuredServices.filter((service) =>
       service.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
-
   
+    const bookService = (service) => {
+      // Implement your booking logic here
+      // You can navigate to a booking page or show a modal for booking.
+      // For this example, we'll just log the service name.
+      // console.log(`Booking service: ${service.name}`);
+      navigate('/Booking');
+    };
+
     return (
       <div className="home-container">
-        <Sidebar />
+        {/* <Sidebar /> */}
         <h1>View CommunityCrafters Marketplace!</h1>
 
-        <div class="input__container">
-  <div class="shadow__input"></div>
-  <button class="input__button__shadow">
+        <div className="input__container">
+  <div className="shadow__input"></div>
+  <button className="input__button__shadow">
     <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" height="20px" width="20px">
-      <path d="M4 9a5 5 0 1110 0A5 5 0 014 9zm5-7a7 7 0 104.2 12.6.999.999 0 00.093.107l3 3a1 1 0 001.414-1.414l-3-3a.999.999 0 00-.107-.093A7 7 0 009 2z" fill-rule="evenodd" fill="#17202A"></path>
+      <path d="M4 9a5 5 0 1110 0A5 5 0 014 9zm5-7a7 7 0 104.2 12.6.999.999 0 00.093.107l3 3a1 1 0 001.414-1.414l-3-3a.999.999 0 00-.107-.093A7 7 0 009 2z" fillRule="evenodd" fill="#17202A"></path>
     </svg>
   </button>
   <input type="text" 
   name="text" 
   value={searchTerm} 
   onChange={e => setSearchTerm(e.target.value)} 
-  class="input__search" 
+  className="input__search" 
   placeholder="What do you want to search?"/>
 </div><br /><br />
         <div className="featured-services">
@@ -121,7 +122,14 @@ import './Home.css';
               <img src={service.image} alt={service.name} />
               <h3>{service.name}</h3>
               <p>{service.description}</p>
-              <p>{service.price}</p>
+              <p>{service.price}</p><br /><br/>
+              <button className="cta" onClick={() => bookService(service)}>
+  <span>Book Appointment</span>
+  <svg viewBox="0 0 13 10" height="10px" width="15px">
+    <path d="M1,5 L11,5"></path>
+    <polyline points="8 1 12 5 8 9"></polyline>
+  </svg>
+</button>
             </div>
           ))}
         </div>

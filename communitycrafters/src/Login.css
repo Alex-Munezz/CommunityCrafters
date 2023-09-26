@@ -1,25 +1,17 @@
 .login-container {
-    max-width: 300px;
-    margin: 0 auto;
-    padding: 200px;
+    width: 500px;
+    margin-right: 10px;
+    padding: 70px;
     border: 5px solid #01cfbe;
-    margin-top: 150px;
   }
-  .form {
-    position: relative;
-    display: flex;
-    flex-direction: column;
+  .login-form {
     gap: 10px;
     padding: 50px 30px;
     background: #0b2447;
-    border-radius: 10px;
     overflow: hidden;
-    perspective: 1000px;
-    transform-style: preserve-3d;
     transform: rotateX(-10deg);
-    transition: all 0.3s ease-in-out;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    animation: form-animation 0.5s ease-in-out;
+     width: 350px;
   }
   
   .success-notification {
@@ -51,7 +43,7 @@
     background-color: transparent;
     transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     transform-style: preserve-3d;
-    color: rgb(255, 255, 255);
+    /* color: rgb(255, 255, 255); */
     border: 2px solid #3b8df2;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   }
@@ -69,8 +61,9 @@
     outline: none;
   }
   
-  button {
+  .login-button {
     padding: 10px 20px;
+    margin-right: 10px;
     border: none;
     border-radius: 5px;
     background-color: transparent;
@@ -84,7 +77,7 @@
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   }
   
-  button:hover {
+  .login-button:hover {
     background-color: #0077be;
     font-size: 17px;
     transform: scale(1.05) rotateY(20deg) rotateX(10deg);
