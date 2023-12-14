@@ -1,22 +1,20 @@
-#form {
-  width: 500px;
-  height: 620px;
-  padding: 25px;
-  margin-left: 100px;
-  margin-top: 200px;
-  background-color: #161616;
-  box-shadow: 0px 15px 60px #00FF7F;
-  outline: 1px solid #2b9962;
-  border-radius: 10px;
+.create-account-page {
+  background-image: url("./create-account.jpg");
+  background-size: cover;
+  height: 100vh;
+  margin-top: -40px;
+  margin-bottom: -30px; 
+  width: 200vh;
 }
-
 #form-body {
   position: absolute;
-  top: 50%;
+  top: 30%;
   right: 25px;
   left: 25px;
-  width: 230px;
+  width: 350px;
   margin: -156px auto 0 auto;
+  margin-left: 50vh;
+  margin-top: -23vh;
 }
 
 #welcome-lines {
@@ -25,13 +23,13 @@
 
 #welcome-line-1 {
   color: #00FF7F;
-  font-weight: 600;
+  font-weight: 1000;
   font-size: 40px;
 }
 
 #welcome-line-2 {
   color: #ffffff;
-  font-size: 18px;
+  font-size: 25px;
   margin-top: 17px;
 }
 
@@ -39,15 +37,11 @@
   margin-top: 40px;
 }
 .form-inp {
-  padding: 11px 25px;
+  padding: 14px 25px;
   background: transparent;
-  border: 1px solid #e3e3e3;
+  border: 3px solid #e3e3e3;
   line-height: 1;
   border-radius: 8px;
-}
-
-.form-inp:focus {
-  border: 1px solid #00FF7F;
 }
 
 .form-inp:first-child {
@@ -57,15 +51,10 @@
 .form-inp input {
   width: 100%;
   background: none;
-  font-size: 13.4px;
-  color: #00FF7F;
+  font-size: 20.4px;
   border: none;
   padding: 0;
-  margin: 0;
-}
-
-.form-inp input:focus {
-  outline: none;
+  color: #ffffff;
 }
 
 #submit-button-cvr {
@@ -95,34 +84,14 @@
   color: #161616;
   cursor: pointer;
 }
-
-#bar {
-  position: absolute;
-  left: 50%;
-  bottom: -50px;
-  width: 28px;
-  height: 8px;
-  margin-left: -33px;
-  background-color: #00FF7F;
-  border-radius: 10px;
+  
+.success-notif {
+  background-color: #28a745;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 840px;
+  width: 50vh;
+  margin-left: 46vh;
 }
-
-#bar:before,
-#bar:after {
-  content: "";
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  background-color: #ececec;
-  border-radius: 50%;
-}
-
-#bar:before {
-  right: -20px;
-}
-
-#bar:after {
-  right: -38px;
-}
-
-    

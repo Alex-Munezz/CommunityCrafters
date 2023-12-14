@@ -5,23 +5,46 @@ import './Login.css';
 function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [showNotification, setShowNotification] = useState(false);
+  const [showNotification1, setShowNotification1] = useState(false);
+  const [showNotification2, setShowNotification2] = useState(false);
   const navigate = useNavigate();
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
 
-    setUsername('');
-    setPassword('');
+    try {
+      const response = await fetch('http://127.0.01.:5000/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          username,
+          password,
+        }),
+      });
 
-    setShowNotification(true);
+      if (!response.ok) {
+        throw new Error('Invalid username or password');
+        
+      }
+      setShowNotification1(true);
 
-    setTimeout(() => {
-      navigate('/Home');
-    }, 3000);
+      // If the request is successful, navigate to the Home page
+      setTimeout(() => {
+        
+        navigate('/Home');
+      }, 3000);
+    
+    } catch (error) {
+      console.error('Error logging in:', error);
+      
+      setShowNotification2(true);
+    }
   };
 
   return (
+    <div className='login-page'>
     <div className="login-container">
       <h2>Login</h2>
       <form className="login-form" onSubmit={handleLogin}>
@@ -43,11 +66,13 @@ function Login() {
           placeholder="Password"
         />
 
-        <button className='login-button'>Submit</button>
+        <button className='login-button' type="submit">Submit</button>
       </form>
-      {showNotification && <p className="success-notification">Welcome back🤗</p>}
+      {showNotification1 && <p className="success-notification">Welcome back 🤗</p>}
+      {showNotification2 && <p className="error-notification">ERROR : Invalid username or password</p>}
       <br />
       <br />
+    </div>
     </div>
   );
 }

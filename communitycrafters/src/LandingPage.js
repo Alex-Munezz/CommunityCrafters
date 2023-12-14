@@ -63,7 +63,7 @@ function LandingPage() {
      <div className='landing'> 
      <p>Would you like to give us a shot?</p>
      <br />
-     <button class="btn"
+     <button className="btn"
      onClick={handleCreateAccount}>
     Create Account
 </button>

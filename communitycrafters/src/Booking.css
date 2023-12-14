@@ -1,0 +1,67 @@
+.booking-container {
+    background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20220427/pngtree-booking-accommodation-mobile-application-image_1091588.jpg");
+    background-size: cover;
+    color: black;
+    height: 100vh;
+    margin-top: -40px;
+    margin-bottom: -30px; 
+    width: 200vh;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+.booking-button {
+    cursor: pointer;
+    font-weight: 700;
+    font-family: Helvetica,"sans-serif";
+    transition: all .2s;
+    padding: 10px 20px;
+    border-radius: 100px;
+    background: #1c19e0;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    margin-left: 92vh;
+  }
+  
+  .booking-button:hover {
+    background: #ffffff;
+  }
+  
+  .booking-button > svg {
+    width: 34px;
+    margin-left: 10px;
+    transition: transform .3s ease-in-out;
+  }
+  
+ .booking-button:hover svg {
+    transform: translateX(5px);
+  }
+  
+  .booking-button:active {
+    transform: scale(0.95);
+  }
+
+  .booking-success-notification {
+    background-color: #b6a403;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    border-radius: 25px;
+    margin-top: -15vh;
+    margin-left: 75vh;
+    width: 50vh;
+  }
+
+  .booking-error-notification {
+    background-color: #940000;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 25px;
+    margin-top: -15vh;
+    margin-left: 75vh;
+    width: 50vh;
+  }
+  
+  
+  

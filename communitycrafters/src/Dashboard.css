@@ -1,0 +1,51 @@
+.user-dashboard-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .user-details {
+    margin-bottom: 30px;
+  }
+  
+  .user-details h2,
+  .booked-services h2 {
+    color: #333;
+  }
+  
+  .booked-services ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .booked-services li {
+    margin: 10px;
+  }
+  
+  .booked-service-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .booked-service-card img {
+    max-width: 100%;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .booked-service-card h3 {
+    margin: 0;
+    color: #555;
+  }
+  
+  .booked-service-card p {
+    color: #777;
+  }
+  
