@@ -18,10 +18,10 @@ body {
 }
 
 .landingparagraph {
-  color: rgb(150, 0, 0);
+  color: rgb(52, 156, 4);
   margin-left: 80px;
   margin-right: 80px;
-  font-size: 20px;
+  font-size: 25px;
 }
 .btn {
   font-size: 17px;
@@ -93,6 +93,76 @@ body {
     transform: translateX(5px);
   }
 }
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+.landing-container {
+  font-family: "Courier Prime", monospace;
+}
+header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -5vh;
+}
+.scroll {
+  margin-top: -10vh;
+  animation-delay: 2s  ;
+}
+.scroll img {
+  width: 7vh;
+  height:5vh;
+  margin-top: 10px;
+}
+header h1 {
+  font-size: 70px;
+  font-weight: 500;
+  color: #cdc9d8;
+  border-right: 4px solid #000;
+  animation: cursor 1s infinite step-end, typing 7s infinite steps(30);
+  white-space: nowrap;
+  overflow: hidden;
+}
+@keyframes cursor{
+  0%, 100%{border-color: transparent;}
+  50%{border-color: #000;}
+}
+
+@keyframes typing{
+  0%{ width: 0ch}
+  30%{ width: 29ch;}
+  80%{ width: 29ch;}
+}
+
+.animate__backInDown {
+  font-size: 3vh;
+}
+.animate__backInLeft {
+  animation-delay: 9s;
+}
+.fixed {
+  font-size: 5vh;
+  animation-delay: 3.5s;
+}
+.one {
+  animation-delay: 4s;
+}
+.three {
+  animation-delay: 5s;
+}
+.five {
+  animation-delay: 6s;
+}
+.two {
+  animation-delay: 4.5s;
+}
+.four {
+  animation-delay: 5.5s;
+}
+.six {
+  animation-delay: 6.5s;
+}
+
 .landing {
   max-width: 800px;
   max-height: 900px;
@@ -137,6 +207,7 @@ body {
 }
 
 .box span img {
+  animation-delay: 7s;
   position: absolute;
   top: 0%;
   left: 0%;
@@ -260,3 +331,190 @@ body {
   scale: 0.7;
 }
 
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  border-radius: 20vh;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 25vh;
+  margin-left:-20vh;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #ffa500;
+}
+.Btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color: rgb(255, 65, 65);
+  margin-left: 30vh;
+  margin-top: -0.5vh;
+}
+
+/* plus sign */
+.sign {
+  width: 100%;
+  transition-duration: .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign svg {
+  width: 17px;
+}
+
+.sign svg path {
+  fill: white;
+}
+/* text */
+.text {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 600;
+  transition-duration: .3s;
+}
+/* hover effect on button width */
+.Btn:hover {
+  width: 125px;
+  border-radius: 40px;
+  transition-duration: .3s;
+}
+
+.Btn:hover .sign {
+  width: 30%;
+  transition-duration: .3s;
+  padding-left: 20px;
+}
+/* hover effect button's text */
+.Btn:hover .text {
+  opacity: 1;
+  width: 70%;
+  transition-duration: .3s;
+  padding-right: 10px;
+}
+/* button click effect*/
+.Btn:active {
+  transform: translate(2px ,2px);
+}
+
+.profile-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 12px;
+  gap: 8px;
+  height: 45px;
+  width: 150px;
+  border: none;
+  background: rgb(74, 180, 50);
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative;
+  margin-left: 25vh;
+}
+
+.lable {
+  line-height: 22px;
+  font-size: 17px;
+  color: #fff;
+  margin-left: 20px;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+}
+
+.profile-button .span {
+  border-radius: 50%;
+  background-color: rgb(48, 129, 29);
+  padding: 10px;
+  position: absolute;
+  left: 0;
+}
+
+.profile-button:hover {
+  background: rgb(48, 129, 29);
+}
+
+.profile-button:hover .svg-icon {
+  animation: slope 0.8s linear infinite;
+}
+
+@keyframes slope {
+  0% {
+  }
+
+  50% {
+    transform: rotate(15deg);
+  }
+
+  100% {
+  }
+}
+.about-container {
+  margin-bottom: 40vh;
+  background-image: url("./about.jpg");
+  background-size: cover;
+  height: 127vh;
+  width: 200vh;
+  margin-top: -23px;
+}
+
+h1 {
+  color: #3490dc;
+  text-align: center;
+  margin-top: 10vh;
+}
+
+.about-p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  font-size: 20px;
+  color: #000;
+}
+.about-footer {
+  margin-bottom: -40vh;
+  width: 190vh;
+  font-size: 20px;
+  margin-left: 3vh;
+  color: #000;
+}
+.nb {
+  margin-top:5vh;
+  width: 190vh;
+  margin-left: 60px;
+}
+.email, .phone {
+  color: blue;
+}

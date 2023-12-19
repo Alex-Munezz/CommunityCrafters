@@ -7,6 +7,9 @@ import image4 from './image4.jpeg';
 import image5 from './image5.webp';
 import image6 from './image6.webp';
 import image7 from './image7.jpg';
+import image8 from './image8.jpg';
+import 'animate.css'
+import down from './down.png';
 
 
 function LandingPage() {
@@ -22,8 +25,32 @@ function LandingPage() {
 
     return (
         <div className='landing-container'>
-  <h1>Welcome to CommunityCrafters where you can find
-     all the services you need in one place </h1>
+          <header>
+            <h1>Welcome to CommunityCrafters</h1>
+            
+             </header>
+             <h2 className='scroll animate__animated animate__fadeInUp'>Scroll down to explore more about us  <img src={down} alt=''/></h2>
+             <br />
+             <br />
+             <br /> 
+             <br />
+             <br />
+     <div className="descriptions">
+           <div class="description">
+        <div className="fixed animate__animated animate__fadeInDown">Where you can find</div>
+        
+          <h2 className='one animate__animated animate__fadeInLeft'>Electricians,</h2>
+          <h2 className='two animate__animated animate__fadeInRight'>Plumbers,</h2>
+          <h2 className='three animate__animated animate__fadeInLeft'>Chauffers,</h2>
+          <h2 className='four animate__animated animate__fadeInRight'>Caterers,</h2>
+          <h2 className='five animate__animated animate__fadeInLeft'>in short,</h2>
+          <h2 className='six animate__animated animate__bounceInUp'>all the services you need in one place</h2>
+       
+      </div>
+      </div>
+     <br />
+     <br />
+     <br />
      <br />
      <br />
      <br />
@@ -40,6 +67,7 @@ function LandingPage() {
       <span style={{'--i': 5}}><img src={image5} alt="" /></span>
       <span style={{'--i': 6}}><img src={image6} alt="" /></span>
       <span style={{'--i': 7}}><img src={image7} alt="" /></span>
+      <span style={{'--i': 8}}><img src={image8} alt="" /></span>
     </div>
      <br />
      <br />
@@ -50,7 +78,10 @@ function LandingPage() {
      <br />
      <br />
      <br />
-     <p className='landingparagraph'>
+     <br />
+     <br />
+     <br />
+     <p className='landingparagraph animate__animated animate__backInLeft'>
      Discover the perfect blend of convenience and community with our
       innovative app! Seamlessly connecting local service providers with
       those in need, our platform transforms your everyday tasks into 

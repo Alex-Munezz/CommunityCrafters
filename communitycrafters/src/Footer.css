@@ -1,0 +1,8 @@
+.footer {
+ border-radius: 20vh;
+ height: 41vh
+  }
+
+.footer :hover {
+    transform: scale(1.02);
+}

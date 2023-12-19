@@ -9,6 +9,9 @@ import Admin from './Admin';
 import Dashboard from './Dashboard';
 import { AuthProvider } from './AuthContext';
 import './App.css';
+import AboutPage from './About';
+import AirbnbList from './Airbnb';
+import AirbnbBooking from './AirbnbBooking';
 
 function App() {
   return (
@@ -16,7 +19,10 @@ function App() {
       <Router>
         <div className="App">
           <Routes>
+            <Route path='/Airbnb' element={<AirbnbList />} />
+            <Route path='/AirbnbBooking' element={<AirbnbBooking/>} />
             <Route path="/" element={<LandingPage />} />
+            <Route path='/About' element={<AboutPage />} />
             <Route path="/Login" element={<Login />} />
             <Route path="/CreateAccount" element={<CreateAccount />} />
             <Route path="/Home" element={<Home />} />

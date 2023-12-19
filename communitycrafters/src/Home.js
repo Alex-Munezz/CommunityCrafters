@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 import './Home.css';
-import Airbnb from './Airbnb.js';
 import React, { useState, useEffect } from 'react';
+import Footer from './Footer.js';
+import Navbar from './Navbar.js';
 
 function ServiceCard({ service }) {
   return (
@@ -48,14 +49,13 @@ function Home() {
 
   return (
     <div className="home-container">
+      <Navbar />
+      <br />  
       <h1>View CommunityCrafters Marketplace!</h1>
 
       <div className="input-wrapper">
-        <button className="icon">
-          {/* Your search icon SVG */}
-        </button>
         <input
-          placeholder="search.."
+          placeholder="Search....."
           className="input"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
@@ -85,9 +85,7 @@ function Home() {
       </div>
       <br />
       <br />
-      <div className='airbnb'>
-        <Airbnb />
-      </div>
+      <Footer />
     </div>
   );
 }

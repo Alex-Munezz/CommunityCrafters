@@ -44,7 +44,7 @@ function Booking() {
       if (response.status === 200) {
         toast.success('Booking successful!', {
           position: 'top-right',
-          autoClose: 7000, // Auto close the notification after 3000 milliseconds (3 seconds)
+          autoClose: 7000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
