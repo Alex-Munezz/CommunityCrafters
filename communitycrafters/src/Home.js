@@ -33,7 +33,7 @@ function Home() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false); // Set loading to false after 5000 milliseconds (5 seconds)
-    }, 5000);
+    }, 1000);
 
     fetch('http://127.0.0.1:5000/services')
       .then((response) => response.json())
@@ -51,7 +51,7 @@ function Home() {
     <div className="home-container">
       <Navbar />
       <br />  
-      <h1>View CommunityCrafters Marketplace!</h1>
+      <h1 className='heading'>View CommunityCrafters Marketplace!</h1>
 
       <div className="input-wrapper">
         <input

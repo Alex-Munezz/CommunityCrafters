@@ -100,7 +100,7 @@ function LandingPage() {
 </button>
       <br />
       <br /><br />
-      <h2>Already a user? <br />Login here :</h2>
+      <h2>Already a user? <br /> <br />Login here:</h2>
       <br />
       <button className="button2"
       onClick={handleLogin}>
